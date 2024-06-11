@@ -3,6 +3,7 @@ import torch
 import numpy as np
 import torch.nn as nn
 from torch.optim import Adam
+import torch.nn.functional as F
 import matplotlib.pyplot as plt
 from torchvision.datasets import MNIST
 from torch.utils.data import DataLoader
@@ -33,9 +34,9 @@ class VAE(nn.Module):
         # encoder
         self.encoder = nn.Sequential(
             nn.Linear(output_dim, hidden_dim),
-            nn.LeakyReLU(0.2),
+            nn.ReLU(),
             nn.Linear(hidden_dim, latent_dim),
-            nn.LeakyReLU(0.2)
+            nn.ReLU()
             )
         
         # latent mean and variance 
@@ -45,9 +46,9 @@ class VAE(nn.Module):
         # decoder
         self.decoder = nn.Sequential(
             nn.Linear(2, latent_dim),
-            nn.LeakyReLU(0.2),
+            nn.ReLU(),
             nn.Linear(latent_dim, hidden_dim),
-            nn.LeakyReLU(0.2),
+            nn.ReLU(),
             nn.Linear(hidden_dim, output_dim),
             nn.Sigmoid()
             )
