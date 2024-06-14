@@ -5,10 +5,10 @@
 #include <filesystem>
 
 namespace fs = std::filesystem;
-
+int inputnum;
 void double2integer(const std::string& filename) {
-	int row_number; 
-	std::cin<<row_number; 
+	std::cout << "the file is: "<<filename<< std::endl; 
+	std::cin >> inputnum; 
     std::ifstream file(filename);
     if (!file.is_open()) {
         std::cerr << "Unable to open input file " << filename << std::endl;
@@ -22,15 +22,19 @@ void double2integer(const std::string& filename) {
         file.close();
         return;
     }
-
+	outfile<<"{"<<std::endl; 
     std::string line;
+	int count=0; 
     while (std::getline(file, line)) {
         try {
+			if(count==0) outfile<<"{";
             double value = std::stod(line);
             int num_int = static_cast<int>(128 * value);
             if (num_int >= 1024) num_int = 1024;
-            outfile << num_int << "\n";
-
+            outfile << num_int;
+			if(count==(inputnum-1)) outfile << "}," << std::endl; 
+			else outfile << ","; 
+			count = (count+1)%inputnum; 
         } catch (const std::invalid_argument& e) {
             std::cerr << "Invalid number in file: " << line << std::endl;
             continue;
@@ -39,7 +43,7 @@ void double2integer(const std::string& filename) {
             continue;
         }
     }
-
+	outfile<<std::endl;
     outfile.close();
     file.close();
 }
