@@ -32,8 +32,8 @@ void double2integer(const std::string& filename) {
 				 count_round++; 
 			}
             double value = std::stod(line);
-            int num_int = static_cast<int>(128 * value);
-            if (num_int >= 1024) num_int = 1024;
+            int num_int = static_cast<int>(32 * value);
+            if (num_int >= 128) num_int = 128;
             outfile << num_int;
 			if(count==(inputnum-1)) outfile << "};" << std::endl; 
 			else outfile << ","; 

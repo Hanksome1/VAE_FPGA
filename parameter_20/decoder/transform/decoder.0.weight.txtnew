@@ -1,0 +1,21 @@
+wire signed [width-1:0] weight0 [0:input_number-1]= '{16,-40};
+wire signed [width-1:0] weight1 [0:input_number-1]= '{128,4};
+wire signed [width-1:0] weight2 [0:input_number-1]= '{73,-108};
+wire signed [width-1:0] weight3 [0:input_number-1]= '{-15,-128};
+wire signed [width-1:0] weight4 [0:input_number-1]= '{-128,9};
+wire signed [width-1:0] weight5 [0:input_number-1]= '{128,11};
+wire signed [width-1:0] weight6 [0:input_number-1]= '{128,-59};
+wire signed [width-1:0] weight7 [0:input_number-1]= '{59,128};
+wire signed [width-1:0] weight8 [0:input_number-1]= '{102,-34};
+wire signed [width-1:0] weight9 [0:input_number-1]= '{-50,-115};
+wire signed [width-1:0] weight10 [0:input_number-1]= '{-82,-128};
+wire signed [width-1:0] weight11 [0:input_number-1]= '{21,-41};
+wire signed [width-1:0] weight12 [0:input_number-1]= '{-67,-128};
+wire signed [width-1:0] weight13 [0:input_number-1]= '{-128,24};
+wire signed [width-1:0] weight14 [0:input_number-1]= '{-106,-102};
+wire signed [width-1:0] weight15 [0:input_number-1]= '{-76,113};
+wire signed [width-1:0] weight16 [0:input_number-1]= '{-123,-128};
+wire signed [width-1:0] weight17 [0:input_number-1]= '{-63,-126};
+wire signed [width-1:0] weight18 [0:input_number-1]= '{-104,-113};
+wire signed [width-1:0] weight19 [0:input_number-1]= '{-7,-32};
+

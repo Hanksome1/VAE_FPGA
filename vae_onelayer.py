@@ -28,7 +28,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class VAE(nn.Module):
 
-    def __init__(self, input_dim=784, hidden_dim=200, latent_dim=30, device=device, output_dim=196):
+    def __init__(self, input_dim=784, hidden_dim=200, latent_dim=18, device=device, output_dim=196):
         super(VAE, self).__init__()
 
         # encoder
