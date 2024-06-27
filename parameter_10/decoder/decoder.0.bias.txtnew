@@ -1,0 +1,6 @@
+wire signed [width-1:0] weight0 [0:input_number-1]= '{151,1170};
+wire signed [width-1:0] weight1 [0:input_number-1]= '{-264,129};
+wire signed [width-1:0] weight2 [0:input_number-1]= '{476,442};
+wire signed [width-1:0] weight3 [0:input_number-1]= '{-489,1249};
+wire signed [width-1:0] weight4 [0:input_number-1]= '{901,1219};
+

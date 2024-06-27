@@ -1,0 +1,11 @@
+wire signed [width-1:0] weight0 [0:input_number-1]= '{1200,2048};
+wire signed [width-1:0] weight1 [0:input_number-1]= '{-1006,-1602};
+wire signed [width-1:0] weight2 [0:input_number-1]= '{61,-16};
+wire signed [width-1:0] weight3 [0:input_number-1]= '{1844,-576};
+wire signed [width-1:0] weight4 [0:input_number-1]= '{-2048,294};
+wire signed [width-1:0] weight5 [0:input_number-1]= '{-2048,2048};
+wire signed [width-1:0] weight6 [0:input_number-1]= '{-2048,-1620};
+wire signed [width-1:0] weight7 [0:input_number-1]= '{579,-789};
+wire signed [width-1:0] weight8 [0:input_number-1]= '{-2048,-2048};
+wire signed [width-1:0] weight9 [0:input_number-1]= '{-899,766};
+
